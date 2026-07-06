@@ -109,9 +109,10 @@
     }
     /* Desktop: court centred vertically */
     .court-svg { top: 50%; transform: translateY(-50%); height: 70%; }
-    /* Mobile: court at top */
+    /* Mobile: court below navbar */
     @media (max-width: 768px) {
-      .court-svg { top: 0; transform: none; height: 50%; }
+      .court-svg { top: 64px; transform: none; height: 45%; }
+      .hero-content-wrap { padding-top: 5rem; }
     }
 
     /* ─── Section headings ─── */
@@ -429,7 +430,7 @@
   <div class="hero-glow hero-glow-2"></div>
 
   <!-- Badminton court — horizontal, centred across hero -->
-  <svg class="court-svg" style="position:absolute;left:0;right:0;width:100%;opacity:0.15;" viewBox="0 0 1340 610" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <svg class="court-svg" style="position:absolute;left:0;right:0;width:100%;opacity:0.15;" viewBox="0 0 1340 610" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet">
     <g stroke="#22c55e" stroke-linecap="round">
       <!-- outer doubles boundary -->
       <rect x="4" y="4" width="1332" height="602" stroke-width="4"/>
@@ -450,7 +451,7 @@
     </g>
   </svg>
 
-  <div class="relative max-w-7xl mx-auto px-6 py-32 pt-40">
+  <div class="hero-content-wrap relative max-w-7xl mx-auto px-6 py-32 pt-40">
     <div class="flex flex-col items-center text-center">
       <div class="shuttle-icon text-5xl mb-8 inline-block">🏸</div>
 
