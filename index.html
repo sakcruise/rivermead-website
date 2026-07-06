@@ -112,7 +112,9 @@
     /* Mobile: court below navbar */
     @media (max-width: 768px) {
       .court-svg { top: 64px; transform: none; height: 45%; }
-      .hero-content-wrap { padding-top: 5rem; }
+      .hero-content-wrap { padding-top: 17rem !important; }
+      .shuttle-icon { display: none !important; }
+      .shuttle-icon-mobile { display: block !important; }
     }
 
     /* ─── Section headings ─── */
@@ -316,6 +318,9 @@
     }
     .btn-outline:hover { background: rgba(255,255,255,0.07); color: #fff; }
 
+    /* Mobile-only shuttle icon hidden by default */
+    .shuttle-icon-mobile { display: none; }
+
     /* ─── Footer ─── */
     footer a { color: #94a3b8; transition: color 0.2s; text-decoration: none; }
     footer a:hover { color: #22c55e; }
@@ -428,6 +433,9 @@
   <div class="hero-grid"></div>
   <div class="hero-glow hero-glow-1"></div>
   <div class="hero-glow hero-glow-2"></div>
+
+  <!-- Shuttlecock for mobile only, centred in court area -->
+  <div class="shuttle-icon-mobile" style="position:absolute;top:7.5rem;left:50%;transform:translateX(-50%);font-size:3rem;z-index:1;animation:shuttle 3s ease-in-out infinite;">🏸</div>
 
   <!-- Badminton court — horizontal, centred across hero -->
   <svg class="court-svg" style="position:absolute;left:0;right:0;width:100%;opacity:0.15;" viewBox="0 0 1340 610" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet">
