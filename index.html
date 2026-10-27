@@ -473,20 +473,9 @@
       .hero-stat-grid { grid-template-columns: 1fr 1fr; }
 
       .membership-grid {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        gap: 1rem;
-        padding: 0 1.5rem 1rem;
-        max-width: 100%;
-        scrollbar-width: none;
-      }
-      .membership-grid::-webkit-scrollbar { display: none; }
-      .membership-grid .plan-card {
-        flex: 0 0 75vw;
-        max-width: 300px;
-        scroll-snap-align: start;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
       }
     }
     @media (max-width: 480px) {
