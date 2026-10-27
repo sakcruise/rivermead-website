@@ -295,8 +295,8 @@
     /* ─── Gallery ─── */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 220px 220px;
       gap: 1rem;
     }
     .gallery-item {
@@ -309,7 +309,7 @@
     .gallery-item:hover {
       box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     }
-    .gallery-item:first-child { grid-column: span 2; grid-row: span 2; }
+    .gallery-item-tall { grid-column: span 1; grid-row: span 2; }
     .gallery-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(15,23,42,0.8) 0%, transparent 60%);
@@ -467,8 +467,9 @@
     }
 
     @media (max-width: 768px) {
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
-      .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
+      .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 0.75rem; }
+      .gallery-item:first-child { grid-column: span 1; grid-row: span 1; }
+      .gallery-item-tall { grid-row: span 1; }
       .schedule-row { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
       .hero-stat-grid { grid-template-columns: 1fr 1fr; }
 
@@ -479,8 +480,6 @@
       }
     }
     @media (max-width: 480px) {
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
-      .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
       .gallery-item { min-height: 140px; }
     }
   </style>
@@ -833,10 +832,10 @@
     </div>
 
     <!-- Magazine mosaic grid -->
-    <div class="reveal" style="display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:220px 220px; gap:1rem;">
+    <div class="reveal gallery-grid">
 
       <!-- Card 1: Wide tall — Club Night (spans 2 rows) -->
-      <div class="gallery-item" style="grid-row:span 2; border-radius:1.25rem; overflow:hidden;">
+      <div class="gallery-item gallery-item-tall" style="border-radius:1.25rem; overflow:hidden;">
         <div class="gallery-photo-card" style="width:100%;height:100%;background-image:linear-gradient(160deg,rgba(5,46,22,0.85) 0%,rgba(20,83,45,0.75) 50%,rgba(22,101,52,0.8) 100%), url('https://images.unsplash.com/photo-1599391398131-cd12dfc6fe98?w=800&q=80');display:flex;flex-direction:column;justify-content:flex-end;padding:2rem;position:relative;">
           <div style="position:absolute;top:1.5rem;left:1.5rem;font-size:4rem;opacity:0.25;line-height:1;transform:rotate(-10deg);">🏸</div>
           <p style="color:#4ade80;font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.4rem;">Every Tuesday</p>
