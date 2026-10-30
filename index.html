@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,8 +38,11 @@
   <style>
     /* ─── Global ─── */
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; overflow-x: hidden; }
-    body { font-family: 'Inter', sans-serif; background: #0f172a; color: #f8fafc; margin: 0; overflow-x: hidden; }
+    html { overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; background: #0f172a; color: #f8fafc; margin: 0; -webkit-overflow-scrolling: touch; }
+    @media screen and (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
 
     /* ─── Navbar ─── */
     #navbar {
@@ -49,6 +52,7 @@
     }
     #navbar.scrolled {
       background: rgba(15,23,42,0.96);
+      -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       padding: 0.75rem 1rem;
       box-shadow: 0 4px 24px rgba(0,0,0,0.4);
@@ -105,6 +109,8 @@
     .hero-bg-gradient {
       background-size: 200% 200%;
       animation: heroGradientShift 12s ease-in-out infinite;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
     }
     .hero-grid {
       display: none;
@@ -116,6 +122,9 @@
       filter: blur(100px);
       opacity: 0.18;
       z-index: 2;
+      will-change: transform;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
     }
     .hero-glow-1 { background: #16a34a; top: -80px; left: -80px; }
     .hero-glow-2 { background: #15803d; bottom: -80px; right: -80px; }
@@ -126,6 +135,9 @@
       z-index: 2;
       pointer-events: none;
       opacity: 0.07;
+      will-change: transform;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
     }
     @keyframes floatDrift1 { 0%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-40px) rotate(15deg)} 100%{transform:translateY(0) rotate(0deg)} }
     @keyframes floatDrift2 { 0%{transform:translateY(0) rotate(-10deg)} 50%{transform:translateY(-55px) rotate(10deg)} 100%{transform:translateY(0) rotate(-10deg)} }
@@ -192,6 +204,7 @@
       background: rgba(30,41,59,0.7);
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: 1.25rem;
+      -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
       transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
       position: relative;
@@ -288,8 +301,8 @@
     /* Floating animation for membership cards */
     @keyframes memberFloat1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
     @keyframes memberFloat2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-    .plan-card.featured { animation: memberFloat1 4s ease-in-out infinite; }
-    .plan-card.standard { animation: memberFloat2 4s ease-in-out 0.5s infinite; }
+    .plan-card.featured { animation: memberFloat1 4s ease-in-out infinite; -webkit-transform: translateZ(0); }
+    .plan-card.standard { animation: memberFloat2 4s ease-in-out 0.5s infinite; -webkit-transform: translateZ(0); }
     .plan-card:hover { animation-play-state: paused; }
 
     /* ─── Gallery ─── */
@@ -372,8 +385,8 @@
     }
 
     /* ─── Scroll reveal ─── */
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; -webkit-transform: translateY(24px); }
+    .reveal.visible { opacity: 1; transform: translateY(0); -webkit-transform: translateY(0); }
 
     /* ─── Mobile nav ─── */
     #mobile-menu {
@@ -381,6 +394,7 @@
       top: 64px; left: 1rem; right: 1rem;
       z-index: 200;
       background: rgba(15,23,42,0.98);
+      -webkit-backdrop-filter: blur(16px);
       backdrop-filter: blur(16px);
       border-radius: 1.25rem;
       padding: 1.5rem;
@@ -549,7 +563,7 @@
 <!-- ═══════════════════════════════════════
      HERO
 ═══════════════════════════════════════ -->
-<section id="hero" class="relative" style="overflow:hidden;">
+<section id="hero" class="relative overflow-hidden">
   <!-- Photo background layer -->
   <div class="hero-bg-photo"></div>
   <!-- Gradient overlay -->
@@ -1168,21 +1182,26 @@
     });
   });
 
-  // ── Parallax on hero elements ──
+  // ── Parallax on hero elements (throttled with rAF) ──
+  let parallaxTicking = false;
   window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const hero = document.getElementById('hero');
-    if (!hero) return;
-    const heroH = hero.offsetHeight;
-    if (scrollY < heroH) {
-      const glows = hero.querySelectorAll('.hero-glow');
-      glows.forEach((g, i) => {
-        g.style.transform = `translateY(${scrollY * (0.15 + i * 0.1)}px)`;
-      });
-      const shuttles = hero.querySelectorAll('.floating-shuttle');
-      shuttles.forEach((s, i) => {
-        const speed = 0.05 + (i % 3) * 0.03;
-        s.style.marginTop = `${scrollY * speed}px`;
+    if (!parallaxTicking) {
+      parallaxTicking = true;
+      requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        const hero = document.getElementById('hero');
+        if (hero && scrollY < hero.offsetHeight) {
+          const glows = hero.querySelectorAll('.hero-glow');
+          glows.forEach((g, i) => {
+            g.style.transform = `translateZ(0) translateY(${scrollY * (0.15 + i * 0.1)}px)`;
+          });
+          const shuttles = hero.querySelectorAll('.floating-shuttle');
+          shuttles.forEach((s, i) => {
+            const speed = 0.05 + (i % 3) * 0.03;
+            s.style.transform = `translateZ(0) translateY(${scrollY * speed}px)`;
+          });
+        }
+        parallaxTicking = false;
       });
     }
   }, { passive: true });
