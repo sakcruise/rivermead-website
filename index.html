@@ -603,16 +603,16 @@
     <div class="flex flex-col items-center text-center">
       <div class="shuttle-icon text-5xl mb-8 inline-block">🏸</div>
 
-      <div class="section-tag mb-6">Reading, Berkshire · Welcoming All Levels</div>
+      <div class="section-tag mb-6" data-section="hero" data-field="tag">Reading, Berkshire · Welcoming All Levels</div>
 
-      <h1 class="font-display font-black leading-[1.05] text-white mb-6" style="font-size:clamp(2rem,10vw,5.5rem);">
-        Rivermead<br/>
-        <span class="bg-gradient-to-r from-primary-light to-emerald-300 bg-clip-text text-transparent">
+      <h1 class="font-display font-black leading-[1.05] text-white mb-6" data-section="hero" data-field="title" style="font-size:clamp(2rem,10vw,5.5rem);">
+        <span data-field="title_line1">Rivermead</span><br/>
+        <span class="bg-gradient-to-r from-primary-light to-emerald-300 bg-clip-text text-transparent" data-field="title_line2">
           Badminton Club
         </span>
       </h1>
 
-      <p class="text-slate-300 text-lg leading-relaxed mb-10" style="max-width:540px;">
+      <p class="text-slate-300 text-lg leading-relaxed mb-10" data-section="hero" data-field="subtitle" style="max-width:540px;">
         A friendly, welcoming badminton club in the heart of Reading. We play every Tuesday night for the love of the game. Whether you're a seasoned player or just looking for a fun, sociable evening on the courts, you belong here.
       </p>
 
@@ -622,22 +622,22 @@
       </div>
 
       <!-- Stats -->
-      <div class="hero-stat-grid grid grid-cols-2 md:grid-cols-4 gap-6" id="stats-grid">
-        <div>
+      <div class="hero-stat-grid grid grid-cols-2 md:grid-cols-4 gap-6" id="stats-grid" data-section="hero" data-field="stats">
+        <div data-stat="0">
           <div class="stat-num" data-count="60" data-suffix="+">0</div>
-          <div class="text-slate-400 text-sm mt-1">Members</div>
+          <div class="text-slate-400 text-sm mt-1" data-field="stat-label">Members</div>
         </div>
-        <div>
+        <div data-stat="1">
           <div class="stat-num" data-count="6">0</div>
-          <div class="text-slate-400 text-sm mt-1">Courts</div>
+          <div class="text-slate-400 text-sm mt-1" data-field="stat-label">Courts</div>
         </div>
-        <div>
+        <div data-stat="2">
           <div class="stat-num" data-text="Tue">Tue</div>
-          <div class="text-slate-400 text-sm mt-1">Weekly night</div>
+          <div class="text-slate-400 text-sm mt-1" data-field="stat-label">Weekly night</div>
         </div>
-        <div>
+        <div data-stat="3">
           <div class="stat-num" data-text="RG1">RG1</div>
-          <div class="text-slate-400 text-sm mt-1">Reading</div>
+          <div class="text-slate-400 text-sm mt-1" data-field="stat-label">Reading</div>
         </div>
       </div>
     </div>
@@ -661,57 +661,57 @@
       <!-- Text -->
       <div class="reveal">
         <span class="section-tag">About Us</span>
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-white mt-4 mb-6 leading-tight wave-heading">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-white mt-4 mb-6 leading-tight wave-heading" data-section="about" data-field="heading">
           More than a club.<br/>A community.
         </h2>
-        <p class="text-slate-300 text-base leading-relaxed mb-5">
+        <p class="text-slate-300 text-base leading-relaxed mb-5" data-section="about" data-field="paragraph1">
           Rivermead Badminton Club is one of Reading's most competitive clubs, fielding three teams in the Berkshire County Badminton League: <strong class="text-white">Men's A</strong>, <strong class="text-white">Men's B</strong>, and a <strong class="text-white">Mixed</strong> team. We compete against 15+ clubs across the county divisions every season.
         </p>
-        <p class="text-slate-300 text-base leading-relaxed mb-8">
+        <p class="text-slate-300 text-base leading-relaxed mb-8" data-section="about" data-field="paragraph2">
           Whether you're looking to sharpen your game, earn a spot in one of our league teams, or just enjoy a great Tuesday night out on the courts. There's a place for you at Rivermead.
         </p>
 
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-2 gap-2" data-section="about" data-field="badges">
           <div class="flex items-center gap-1.5 bg-navy-light/50 rounded-lg px-3 py-2 border border-white/08">
             <span class="text-primary-light text-sm">✓</span>
-            <span class="text-slate-200 text-xs font-medium">Berkshire County League</span>
+            <span class="text-slate-200 text-xs font-medium" data-badge="0">Berkshire County League</span>
           </div>
           <div class="flex items-center gap-1.5 bg-navy-light/50 rounded-lg px-3 py-2 border border-white/08">
             <span class="text-primary-light text-sm">✓</span>
-            <span class="text-slate-200 text-xs font-medium">3 competitive teams</span>
+            <span class="text-slate-200 text-xs font-medium" data-badge="1">3 competitive teams</span>
           </div>
           <div class="flex items-center gap-1.5 bg-navy-light/50 rounded-lg px-3 py-2 border border-white/08">
             <span class="text-primary-light text-sm">✓</span>
-            <span class="text-slate-200 text-xs font-medium">All abilities welcome</span>
+            <span class="text-slate-200 text-xs font-medium" data-badge="2">All abilities welcome</span>
           </div>
           <div class="flex items-center gap-1.5 bg-navy-light/50 rounded-lg px-3 py-2 border border-white/08">
             <span class="text-primary-light text-sm">✓</span>
-            <span class="text-slate-200 text-xs font-medium">BA England affiliated</span>
+            <span class="text-slate-200 text-xs font-medium" data-badge="3">BA England affiliated</span>
           </div>
         </div>
       </div>
 
       <!-- Feature cards -->
-      <div class="reveal grid grid-cols-2 gap-4">
-        <div class="glass-card p-6">
-          <div class="text-3xl mb-3">🏆</div>
-          <h3 class="text-white font-semibold text-base mb-2">Men's A Team</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Our top squad competing in the higher Berkshire county divisions against the best clubs in the region.</p>
+      <div class="reveal grid grid-cols-2 gap-4" data-section="about" data-field="cards">
+        <div class="glass-card p-6" data-card="0">
+          <div class="text-3xl mb-3" data-field="emoji">🏆</div>
+          <h3 class="text-white font-semibold text-base mb-2" data-field="title">Men's A Team</h3>
+          <p class="text-slate-400 text-sm leading-relaxed" data-field="text">Our top squad competing in the higher Berkshire county divisions against the best clubs in the region.</p>
         </div>
-        <div class="glass-card p-6">
-          <div class="text-3xl mb-3">🥈</div>
-          <h3 class="text-white font-semibold text-base mb-2">Men's B Team</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">A strong second squad giving more players the chance to represent the club in county league fixtures.</p>
+        <div class="glass-card p-6" data-card="1">
+          <div class="text-3xl mb-3" data-field="emoji">🥈</div>
+          <h3 class="text-white font-semibold text-base mb-2" data-field="title">Men's B Team</h3>
+          <p class="text-slate-400 text-sm leading-relaxed" data-field="text">A strong second squad giving more players the chance to represent the club in county league fixtures.</p>
         </div>
-        <div class="glass-card p-6">
-          <div class="text-3xl mb-3">🎽</div>
-          <h3 class="text-white font-semibold text-base mb-2">Mixed Team</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Men and women competing together in Berkshire's mixed doubles division, one of our most exciting teams.</p>
+        <div class="glass-card p-6" data-card="2">
+          <div class="text-3xl mb-3" data-field="emoji">🎽</div>
+          <h3 class="text-white font-semibold text-base mb-2" data-field="title">Mixed Team</h3>
+          <p class="text-slate-400 text-sm leading-relaxed" data-field="text">Men and women competing together in Berkshire's mixed doubles division, one of our most exciting teams.</p>
         </div>
-        <div class="glass-card p-6">
-          <div class="text-3xl mb-3">🤝</div>
-          <h3 class="text-white font-semibold text-base mb-2">Club Nights</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Every Tuesday: relaxed social play on all 6 courts. All abilities welcome, no booking needed.</p>
+        <div class="glass-card p-6" data-card="3">
+          <div class="text-3xl mb-3" data-field="emoji">🤝</div>
+          <h3 class="text-white font-semibold text-base mb-2" data-field="title">Club Nights</h3>
+          <p class="text-slate-400 text-sm leading-relaxed" data-field="text">Every Tuesday: relaxed social play on all 6 courts. All abilities welcome, no booking needed.</p>
         </div>
       </div>
 
@@ -727,11 +727,11 @@
   <div class="max-w-4xl mx-auto">
     <div class="text-center reveal mb-14">
       <span class="section-tag">Weekly Schedule</span>
-      <h2 class="font-display font-bold text-4xl md:text-5xl text-white mt-4 mb-4 wave-heading">When we play</h2>
-      <p class="text-slate-400 text-base max-w-lg mx-auto">Courts are at <strong class="text-white">Rivermead Leisure Centre</strong>, Oxford Road. Bring your own racket or borrow one of ours.</p>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-white mt-4 mb-4 wave-heading" data-section="schedule" data-field="heading">When we play</h2>
+      <p class="text-slate-400 text-base max-w-lg mx-auto" data-section="schedule" data-field="description">Courts are at <strong class="text-white">Rivermead Leisure Centre</strong>, Oxford Road. Bring your own racket or borrow one of ours.</p>
     </div>
 
-    <div class="flex flex-col gap-3 reveal">
+    <div class="flex flex-col gap-3 reveal" data-section="schedule" data-field="sessions">
 
       <!-- Header row -->
       <div class="schedule-row text-slate-400 text-xs font-semibold uppercase tracking-widest" style="background:transparent; border-color:transparent;">
@@ -741,11 +741,11 @@
         <span>Level</span>
       </div>
 
-      <div class="schedule-row">
-        <span class="text-white font-semibold">Tuesday</span>
-        <span class="text-slate-300">7:50 to 10:00 pm</span>
-        <span class="text-slate-300">Club Night</span>
-        <span><span class="badge badge-green">All</span></span>
+      <div class="schedule-row" data-session="0">
+        <span class="text-white font-semibold" data-field="day">Tuesday</span>
+        <span class="text-slate-300" data-field="time">7:50 to 10:00 pm</span>
+        <span class="text-slate-300" data-field="type">Club Night</span>
+        <span><span class="badge badge-green" data-field="level">All</span></span>
       </div>
 
     </div>
@@ -771,21 +771,21 @@
   <div class="max-w-6xl mx-auto">
     <div class="text-center reveal mb-14">
       <span class="section-tag">Membership</span>
-      <h2 class="font-display font-bold text-4xl md:text-5xl text-white mt-4 mb-4 wave-heading">Join Rivermead</h2>
-      <p class="text-slate-400 text-base max-w-lg mx-auto">We're a mixed club welcoming male and female players. Most members are intermediate level. A basic knowledge of rules and scoring helps everyone enjoy the game.</p>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-white mt-4 mb-4 wave-heading" data-section="membership" data-field="heading">Join Rivermead</h2>
+      <p class="text-slate-400 text-base max-w-lg mx-auto" data-section="membership" data-field="description">We're a mixed club welcoming male and female players. Most members are intermediate level. A basic knowledge of rules and scoring helps everyone enjoy the game.</p>
     </div>
 
-    <div class="membership-grid reveal">
+    <div class="membership-grid reveal" data-section="membership" data-field="plans">
 
       <!-- Full Membership -->
-      <div class="plan-card featured" style="margin:0;">
-        <div class="text-emerald-200 text-xs font-bold uppercase tracking-widest mb-1">🏸 Full Membership</div>
+      <div class="plan-card featured" data-plan="0" style="margin:0;">
+        <div class="text-emerald-200 text-xs font-bold uppercase tracking-widest mb-1" data-field="plan-name">🏸 Full Membership</div>
         <div class="flex items-end gap-1 mt-3 mb-1">
-          <span class="font-display font-black text-5xl text-white">£78</span>
-          <span class="text-emerald-200 mb-2">/ quarter</span>
+          <span class="font-display font-black text-5xl text-white" data-field="price">£78</span>
+          <span class="text-emerald-200 mb-2" data-field="period">/ quarter</span>
         </div>
-        <p class="text-emerald-100 text-sm mb-6">Your quarterly subscription covers everything. Just show up and play.</p>
-        <ul class="flex flex-col gap-3 mb-8">
+        <p class="text-emerald-100 text-sm mb-6" data-field="plan-desc">Your quarterly subscription covers everything. Just show up and play.</p>
+        <ul class="flex flex-col gap-3 mb-8" data-field="features">
           <li class="flex items-center gap-2.5 text-white text-sm"><span class="text-white font-bold">✓</span> Court hire included</li>
           <li class="flex items-center gap-2.5 text-white text-sm"><span class="text-white font-bold">✓</span> Feather shuttlecocks provided</li>
           <li class="flex items-center gap-2.5 text-white text-sm"><span class="text-white font-bold">✓</span> Occasional free coaching</li>
@@ -795,20 +795,20 @@
         </ul>
         <div class="flex items-center gap-2 mb-5 p-3 rounded-xl" style="background:rgba(0,0,0,0.2);">
           <span class="text-base">💳</span>
-          <p class="text-emerald-200 text-xs leading-snug">Standing order only. We cannot accept other payment methods. Email us to apply.</p>
+          <p class="text-emerald-200 text-xs leading-snug" data-field="payment-note">Standing order only. We cannot accept other payment methods. Email us to apply.</p>
         </div>
         <a href="mailto:rivermeadbadclub@gmail.com?subject=Full Membership Application" class="btn-primary w-full justify-center" style="background:rgba(0,0,0,0.25); box-shadow:none; border: 1px solid rgba(255,255,255,0.3);">Apply for Membership</a>
       </div>
 
       <!-- Guest Membership -->
-      <div class="plan-card standard" style="display:flex; flex-direction:column;">
-        <div class="text-slate-300 text-xs font-bold uppercase tracking-widest mb-1">👤 Guest Membership</div>
+      <div class="plan-card standard" data-plan="1" style="display:flex; flex-direction:column;">
+        <div class="text-slate-300 text-xs font-bold uppercase tracking-widest mb-1" data-field="plan-name">👤 Guest Membership</div>
         <div class="flex items-end gap-1 mt-3 mb-1">
-          <span class="font-display font-black text-5xl text-white">£8</span>
-          <span class="text-slate-400 mb-2">/ night</span>
+          <span class="font-display font-black text-5xl text-white" data-field="price">£8</span>
+          <span class="text-slate-400 mb-2" data-field="period">/ night</span>
         </div>
-        <p class="text-slate-400 text-sm mb-6">When space is available we invite guests from our waiting list for trial nights, a chance to experience the club before joining.</p>
-        <ul class="flex flex-col gap-3 mb-6">
+        <p class="text-slate-400 text-sm mb-6" data-field="plan-desc">When space is available we invite guests from our waiting list for trial nights, a chance to experience the club before joining.</p>
+        <ul class="flex flex-col gap-3 mb-6" data-field="features">
           <li class="flex items-center gap-2.5 text-slate-300 text-sm"><span class="text-primary-light">✓</span> Friendly, competitive badminton</li>
           <li class="flex items-center gap-2.5 text-slate-300 text-sm"><span class="text-primary-light">✓</span> All facilities included</li>
           <li class="flex items-center gap-2.5 text-slate-300 text-sm"><span class="text-primary-light">✓</span> Up to 3 visits covered by BA insurance</li>
@@ -846,10 +846,10 @@
     </div>
 
     <!-- Magazine mosaic grid -->
-    <div class="reveal gallery-grid">
+    <div class="reveal gallery-grid" data-section="gallery" data-field="cards">
 
       <!-- Card 1: Wide tall — Club Night (spans 2 rows) -->
-      <div class="gallery-item gallery-item-tall" style="border-radius:1.25rem; overflow:hidden;">
+      <div class="gallery-item gallery-item-tall" data-gallery-card="0" style="border-radius:1.25rem; overflow:hidden;">
         <div class="gallery-photo-card" style="width:100%;height:100%;background-image:linear-gradient(160deg,rgba(5,46,22,0.85) 0%,rgba(20,83,45,0.75) 50%,rgba(22,101,52,0.8) 100%), url('https://images.unsplash.com/photo-1599391398131-cd12dfc6fe98?w=800&q=80');display:flex;flex-direction:column;justify-content:flex-end;padding:2rem;position:relative;">
           <div style="position:absolute;top:1.5rem;left:1.5rem;font-size:4rem;opacity:0.25;line-height:1;transform:rotate(-10deg);">🏸</div>
           <p style="color:#4ade80;font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.4rem;">Every Tuesday</p>
@@ -860,7 +860,7 @@
       </div>
 
       <!-- Card 2: County Finals -->
-      <div class="gallery-item" style="border-radius:1.25rem; overflow:hidden;">
+      <div class="gallery-item" data-gallery-card="1" style="border-radius:1.25rem; overflow:hidden;">
         <div class="gallery-photo-card" style="width:100%;height:100%;background-image:linear-gradient(135deg,rgba(30,27,75,0.8),rgba(55,48,163,0.75)), url('https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=600&q=80');display:flex;flex-direction:column;justify-content:flex-end;padding:1.25rem;position:relative;">
           <div style="position:absolute;top:1rem;right:1rem;font-size:2.5rem;opacity:0.3;">🏆</div>
           <p style="color:#a5b4fc;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.25rem;">Berkshire League</p>
@@ -870,7 +870,7 @@
       </div>
 
       <!-- Card 3: Mixed Team -->
-      <div class="gallery-item" style="border-radius:1.25rem; overflow:hidden;">
+      <div class="gallery-item" data-gallery-card="2" style="border-radius:1.25rem; overflow:hidden;">
         <div class="gallery-photo-card" style="width:100%;height:100%;background-image:linear-gradient(135deg,rgba(69,10,10,0.8),rgba(153,27,27,0.75)), url('https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=600&q=80');display:flex;flex-direction:column;justify-content:flex-end;padding:1.25rem;position:relative;">
           <div style="position:absolute;top:1rem;right:1rem;font-size:2.5rem;opacity:0.3;">🎽</div>
           <p style="color:#fca5a5;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.25rem;">League Night</p>
@@ -880,7 +880,7 @@
       </div>
 
       <!-- Card 4: Club Social -->
-      <div class="gallery-item" style="border-radius:1.25rem; overflow:hidden;">
+      <div class="gallery-item" data-gallery-card="3" style="border-radius:1.25rem; overflow:hidden;">
         <div class="gallery-photo-card" style="width:100%;height:100%;background-image:linear-gradient(135deg,rgba(12,74,110,0.8),rgba(7,89,133,0.75)), url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80');display:flex;flex-direction:column;justify-content:flex-end;padding:1.25rem;position:relative;">
           <div style="position:absolute;top:1rem;right:1rem;font-size:2.5rem;opacity:0.3;">🤝</div>
           <p style="color:#7dd3fc;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.25rem;">Off Court</p>
@@ -890,7 +890,7 @@
       </div>
 
       <!-- Card 5: End of Season Awards -->
-      <div class="gallery-item" style="border-radius:1.25rem; overflow:hidden;">
+      <div class="gallery-item" data-gallery-card="4" style="border-radius:1.25rem; overflow:hidden;">
         <div class="gallery-photo-card" style="width:100%;height:100%;background-image:linear-gradient(135deg,rgba(6,78,59,0.8),rgba(6,95,70,0.75)), url('https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&q=80');display:flex;flex-direction:column;justify-content:flex-end;padding:1.25rem;position:relative;">
           <div style="position:absolute;top:1rem;right:1rem;font-size:2.5rem;opacity:0.3;">🌟</div>
           <p style="color:#6ee7b7;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.25rem;">Annual</p>
@@ -914,50 +914,50 @@
     <!-- Officers -->
     <div class="reveal text-center mb-14">
       <span class="section-tag">Get In Touch</span>
-      <h2 class="font-display font-bold text-4xl md:text-5xl text-white mt-4 mb-4 wave-heading">Meet Our Committee</h2>
-      <p class="text-slate-400 text-base max-w-lg mx-auto">Have a question, want to join, or just curious about the club? Drop us an email and we'll get back to you.</p>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-white mt-4 mb-4 wave-heading" data-section="committee" data-field="heading">Meet Our Committee</h2>
+      <p class="text-slate-400 text-base max-w-lg mx-auto" data-section="committee" data-field="description">Have a question, want to join, or just curious about the club? Drop us an email and we'll get back to you.</p>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 reveal mb-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 reveal mb-6" data-section="committee" data-field="members">
 
-      <div class="glass-card committee-card p-5 flex items-center gap-4">
-        <div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-display font-bold text-lg shrink-0">A</div>
+      <div class="glass-card committee-card p-5 flex items-center gap-4" data-member="0">
+        <div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-display font-bold text-lg shrink-0" data-field="initial">A</div>
         <div class="flex-1 min-w-0">
-          <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5">Chairman</p>
-          <p class="text-white font-semibold text-base">Andy</p>
+          <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5" data-field="role">Chairman</p>
+          <p class="text-white font-semibold text-base" data-field="name">Andy</p>
         </div>
       </div>
 
-      <div class="glass-card committee-card p-5 flex items-center gap-4">
-        <div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-display font-bold text-lg shrink-0">H</div>
+      <div class="glass-card committee-card p-5 flex items-center gap-4" data-member="1">
+        <div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-display font-bold text-lg shrink-0" data-field="initial">H</div>
         <div class="flex-1 min-w-0">
-          <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5">Club Secretary / Welfare Organiser</p>
-          <p class="text-white font-semibold text-base">Hilary</p>
-          <p class="text-slate-500 text-xs">Senior Member</p>
+          <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5" data-field="role">Club Secretary / Welfare Organiser</p>
+          <p class="text-white font-semibold text-base" data-field="name">Hilary</p>
+          <p class="text-slate-500 text-xs" data-field="subtitle">Senior Member</p>
         </div>
       </div>
 
-      <div class="glass-card committee-card p-5 flex items-center gap-4">
-        <div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white font-display font-bold text-lg shrink-0">B</div>
+      <div class="glass-card committee-card p-5 flex items-center gap-4" data-member="2">
+        <div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white font-display font-bold text-lg shrink-0" data-field="initial">B</div>
         <div class="flex-1 min-w-0">
-          <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5">Match Secretary</p>
-          <p class="text-white font-semibold text-base">Baqir</p>
+          <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5" data-field="role">Match Secretary</p>
+          <p class="text-white font-semibold text-base" data-field="name">Baqir</p>
         </div>
       </div>
 
-      <div class="glass-card committee-card p-5 flex items-center gap-4">
-        <div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white font-display font-bold text-lg shrink-0">J</div>
+      <div class="glass-card committee-card p-5 flex items-center gap-4" data-member="3">
+        <div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white font-display font-bold text-lg shrink-0" data-field="initial">J</div>
         <div class="flex-1 min-w-0">
-          <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5">Membership Enquiries</p>
-          <p class="text-white font-semibold text-base">Jolie</p>
+          <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5" data-field="role">Membership Enquiries</p>
+          <p class="text-white font-semibold text-base" data-field="name">Jolie</p>
         </div>
       </div>
 
-      <div class="glass-card committee-card p-5 flex items-center gap-4">
-        <div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-display font-bold text-lg shrink-0">S</div>
+      <div class="glass-card committee-card p-5 flex items-center gap-4" data-member="4">
+        <div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-display font-bold text-lg shrink-0" data-field="initial">S</div>
         <div class="flex-1 min-w-0">
-          <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5">Treasurer</p>
-          <p class="text-white font-semibold text-base">Sakthi</p>
+          <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5" data-field="role">Treasurer</p>
+          <p class="text-white font-semibold text-base" data-field="name">Sakthi</p>
         </div>
       </div>
 
@@ -993,10 +993,10 @@
 
         <!-- Info cards -->
         <div class="flex flex-col gap-4">
-          <div class="glass-card p-5">
+          <div class="glass-card p-5" data-section="contact" data-field="address">
             <div class="text-2xl mb-2">📍</div>
             <p class="text-white font-semibold text-sm mb-1">Address</p>
-            <p class="text-slate-400 text-sm leading-relaxed">Rivermead Leisure Centre<br/>Richfield Avenue<br/>Reading, RG1 8EQ</p>
+            <p class="text-slate-400 text-sm leading-relaxed" data-field="address-text">Rivermead Leisure Centre<br/>Richfield Avenue<br/>Reading, RG1 8EQ</p>
             <a href="https://maps.google.com/?q=Rivermead+Leisure+Centre,+Richfield+Avenue,+Reading,+RG1+8EQ" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-primary-light text-xs font-medium mt-2 hover:underline">Open in Maps ↗</a>
           </div>
           <div class="glass-card p-5">
@@ -1004,10 +1004,10 @@
             <p class="text-white font-semibold text-sm mb-1">Club Nights</p>
             <p class="text-slate-400 text-sm">Tuesday, 7:50pm to 10:00pm</p>
           </div>
-          <div class="glass-card p-5">
+          <div class="glass-card p-5" data-section="contact" data-field="parking-card">
             <div class="text-2xl mb-2">🚗</div>
             <p class="text-white font-semibold text-sm mb-1">Parking &amp; Bus</p>
-            <p class="text-slate-400 text-sm leading-relaxed">Free on-site parking. Bus routes 17 and 21 stop on Richfield Avenue.</p>
+            <p class="text-slate-400 text-sm leading-relaxed" data-field="parking-text">Free on-site parking. Bus routes 17 and 21 stop on Richfield Avenue.</p>
           </div>
         </div>
 
@@ -1212,6 +1212,265 @@
     document.getElementById('contact-form').style.display = 'none';
     document.getElementById('form-success').style.display = 'flex';
   }
+
+  // ── Supabase content hydration ──
+  (function() {
+    var SUPABASE_URL = 'https://minhnhrdvgvlqajjcbph.supabase.co';
+    var ANON_KEY = 'sb_publishable_H8XJmKqpfPoFtoNFxnl7kA_oHOklkrW';
+
+    function setText(el, text) { if (el && text != null) el.textContent = text; }
+    function setHTML(el, html) { if (el && html != null) el.innerHTML = html; }
+
+    function hydrateHero(c) {
+      if (!c) return;
+      var tag = document.querySelector('[data-section="hero"][data-field="tag"]');
+      if (tag && c.tag) tag.textContent = c.tag;
+
+      var t1 = document.querySelector('[data-field="title_line1"]');
+      var t2 = document.querySelector('[data-field="title_line2"]');
+      if (t1 && c.title_line1) t1.textContent = c.title_line1;
+      if (t2 && c.title_line2) t2.textContent = c.title_line2;
+
+      var sub = document.querySelector('[data-section="hero"][data-field="subtitle"]');
+      if (sub && c.subtitle) sub.textContent = c.subtitle;
+
+      if (c.stats && Array.isArray(c.stats)) {
+        c.stats.forEach(function(s, i) {
+          var wrap = document.querySelector('[data-stat="' + i + '"]');
+          if (!wrap) return;
+          var num = wrap.querySelector('.stat-num');
+          var label = wrap.querySelector('[data-field="stat-label"]');
+          if (num && s.value) {
+            var parsed = parseInt(s.value);
+            if (!isNaN(parsed)) {
+              var suffix = s.value.replace(/\d+/, '');
+              num.setAttribute('data-count', parsed);
+              num.setAttribute('data-suffix', suffix);
+              num.removeAttribute('data-text');
+            } else {
+              num.removeAttribute('data-count');
+              num.removeAttribute('data-suffix');
+              num.setAttribute('data-text', s.value);
+              num.textContent = s.value;
+            }
+          }
+          if (label && s.label) label.textContent = s.label;
+        });
+      }
+    }
+
+    function hydrateAbout(c) {
+      if (!c) return;
+      var heading = document.querySelector('[data-section="about"][data-field="heading"]');
+      if (heading && c.heading) heading.innerHTML = c.heading.replace(/\n/g, '<br/>');
+
+      var p1 = document.querySelector('[data-section="about"][data-field="paragraph1"]');
+      if (p1 && c.paragraph1) p1.innerHTML = c.paragraph1;
+
+      var p2 = document.querySelector('[data-section="about"][data-field="paragraph2"]');
+      if (p2 && c.paragraph2) p2.innerHTML = c.paragraph2;
+
+      if (c.badges && Array.isArray(c.badges)) {
+        c.badges.forEach(function(b, i) {
+          var el = document.querySelector('[data-badge="' + i + '"]');
+          if (el) el.textContent = b;
+        });
+      }
+
+      if (c.cards && Array.isArray(c.cards)) {
+        c.cards.forEach(function(card, i) {
+          var wrap = document.querySelector('[data-section="about"] [data-card="' + i + '"]');
+          if (!wrap) return;
+          if (card.emoji) setText(wrap.querySelector('[data-field="emoji"]'), card.emoji);
+          if (card.title) setText(wrap.querySelector('[data-field="title"]'), card.title);
+          if (card.text) setText(wrap.querySelector('[data-field="text"]'), card.text);
+        });
+      }
+    }
+
+    function hydrateSchedule(c) {
+      if (!c) return;
+      var heading = document.querySelector('[data-section="schedule"][data-field="heading"]');
+      if (heading && c.heading) heading.textContent = c.heading;
+
+      var desc = document.querySelector('[data-section="schedule"][data-field="description"]');
+      if (desc && c.description) desc.innerHTML = c.description;
+
+      if (c.sessions && Array.isArray(c.sessions)) {
+        var container = document.querySelector('[data-section="schedule"][data-field="sessions"]');
+        if (!container) return;
+        var existingRows = container.querySelectorAll('[data-session]');
+        c.sessions.forEach(function(s, i) {
+          var row = container.querySelector('[data-session="' + i + '"]');
+          if (!row) {
+            row = document.createElement('div');
+            row.className = 'schedule-row';
+            row.setAttribute('data-session', i);
+            row.innerHTML = '<span class="text-white font-semibold" data-field="day"></span><span class="text-slate-300" data-field="time"></span><span class="text-slate-300" data-field="type"></span><span><span class="badge badge-green" data-field="level"></span></span>';
+            container.appendChild(row);
+          }
+          setText(row.querySelector('[data-field="day"]'), s.day);
+          setText(row.querySelector('[data-field="time"]'), s.time);
+          setText(row.querySelector('[data-field="type"]'), s.type);
+          setText(row.querySelector('[data-field="level"]'), s.level);
+        });
+        existingRows.forEach(function(row) {
+          var idx = parseInt(row.getAttribute('data-session'));
+          if (idx >= c.sessions.length) row.remove();
+        });
+      }
+    }
+
+    function hydrateMembership(c) {
+      if (!c) return;
+      var heading = document.querySelector('[data-section="membership"][data-field="heading"]');
+      if (heading && c.heading) heading.textContent = c.heading;
+
+      var desc = document.querySelector('[data-section="membership"][data-field="description"]');
+      if (desc && c.description) desc.textContent = c.description;
+
+      if (c.plans && Array.isArray(c.plans)) {
+        c.plans.forEach(function(plan, i) {
+          var card = document.querySelector('[data-plan="' + i + '"]');
+          if (!card) return;
+          var nameEl = card.querySelector('[data-field="plan-name"]');
+          if (nameEl && plan.name) nameEl.textContent = (plan.emoji || '') + ' ' + plan.name;
+          var priceEl = card.querySelector('[data-field="price"]');
+          if (priceEl && plan.price) priceEl.textContent = '£' + plan.price;
+          var periodEl = card.querySelector('[data-field="period"]');
+          if (periodEl && plan.period) periodEl.textContent = '/ ' + plan.period;
+          var descEl = card.querySelector('[data-field="plan-desc"]');
+          if (descEl && plan.description) descEl.textContent = plan.description;
+          var payEl = card.querySelector('[data-field="payment-note"]');
+          if (payEl && plan.payment_note) payEl.textContent = plan.payment_note;
+          if (plan.features && Array.isArray(plan.features)) {
+            var ul = card.querySelector('[data-field="features"]');
+            if (ul) {
+              var isFeatured = card.classList.contains('featured');
+              ul.innerHTML = plan.features.map(function(f) {
+                return '<li class="flex items-center gap-2.5 ' + (isFeatured ? 'text-white' : 'text-slate-300') + ' text-sm"><span class="' + (isFeatured ? 'text-white font-bold' : 'text-primary-light') + '">✓</span> ' + f + '</li>';
+              }).join('');
+              if (plan.notes) {
+                plan.notes.forEach(function(n) {
+                  ul.innerHTML += '<li class="flex items-center gap-2.5 text-slate-400 text-sm"><span class="text-slate-600">→</span> ' + n + '</li>';
+                });
+              }
+            }
+          }
+        });
+      }
+    }
+
+    function hydrateGallery(c) {
+      if (!c || !c.cards) return;
+      c.cards.forEach(function(card, i) {
+        var el = document.querySelector('[data-gallery-card="' + i + '"]');
+        if (!el) return;
+        var photoCard = el.querySelector('.gallery-photo-card');
+        if (!photoCard) return;
+        var tagEl = photoCard.querySelectorAll('p')[0];
+        var titleEl = i === 0 ? photoCard.querySelector('h3') : photoCard.querySelectorAll('p')[1];
+        var textEl = i === 0 ? photoCard.querySelectorAll('p')[1] : null;
+        if (tagEl && card.tag) tagEl.textContent = card.tag;
+        if (titleEl && card.title) { titleEl.innerHTML = card.title.replace(/\n/g, '<br/>'); }
+        if (textEl && card.text) textEl.textContent = card.text;
+        if (card.image_url) {
+          var url = card.image_url.startsWith('http') ? card.image_url : SUPABASE_URL + '/storage/v1/object/public/website-images/' + card.image_url;
+          var gradient = 'linear-gradient(' + (i === 0 ? '160deg' : '135deg') + ',' + (card.color_from || 'rgba(0,0,0,0.7)') + ',' + (card.color_to || 'rgba(0,0,0,0.5)') + ')';
+          photoCard.style.backgroundImage = gradient + ", url('" + url + "')";
+        }
+      });
+    }
+
+    function hydrateCommittee(c) {
+      if (!c) return;
+      var heading = document.querySelector('[data-section="committee"][data-field="heading"]');
+      if (heading && c.heading) heading.textContent = c.heading;
+
+      var desc = document.querySelector('[data-section="committee"][data-field="description"]');
+      if (desc && c.description) desc.textContent = c.description;
+
+      if (c.email) {
+        var emailLinks = document.querySelectorAll('a[href^="mailto:rivermeadbadclub"]');
+        emailLinks.forEach(function(a) {
+          var subject = '';
+          var href = a.getAttribute('href');
+          var match = href && href.match(/subject=([^&]*)/);
+          if (match) subject = match[1];
+          a.setAttribute('href', 'mailto:' + c.email + (subject ? '?subject=' + subject : ''));
+        });
+      }
+
+      if (c.members && Array.isArray(c.members)) {
+        var container = document.querySelector('[data-section="committee"][data-field="members"]');
+        if (!container) return;
+        var colorPalette = [
+          ['from-primary','to-primary-dark'], ['from-blue-600','to-blue-800'],
+          ['from-purple-600','to-purple-800'], ['from-pink-500','to-rose-600'],
+          ['from-amber-500','to-orange-600'], ['from-teal-500','to-teal-700'],
+          ['from-indigo-500','to-indigo-700']
+        ];
+        var existingCards = container.querySelectorAll('[data-member]');
+        c.members.forEach(function(m, i) {
+          var card = container.querySelector('[data-member="' + i + '"]');
+          if (!card) {
+            card = document.createElement('div');
+            card.className = 'glass-card committee-card p-5 flex items-center gap-4';
+            card.setAttribute('data-member', i);
+            var colors = colorPalette[i % colorPalette.length];
+            card.innerHTML = '<div class="committee-avatar w-11 h-11 rounded-full bg-gradient-to-br ' + colors[0] + ' ' + colors[1] + ' flex items-center justify-center text-white font-display font-bold text-lg shrink-0" data-field="initial"></div><div class="flex-1 min-w-0"><p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-0.5" data-field="role"></p><p class="text-white font-semibold text-base" data-field="name"></p></div>';
+            container.appendChild(card);
+          }
+          setText(card.querySelector('[data-field="initial"]'), m.initial || (m.name ? m.name[0] : ''));
+          setText(card.querySelector('[data-field="role"]'), m.role);
+          setText(card.querySelector('[data-field="name"]'), m.name);
+          var subtitleEl = card.querySelector('[data-field="subtitle"]');
+          if (m.subtitle) {
+            if (!subtitleEl) {
+              subtitleEl = document.createElement('p');
+              subtitleEl.className = 'text-slate-500 text-xs';
+              subtitleEl.setAttribute('data-field', 'subtitle');
+              card.querySelector('.flex-1').appendChild(subtitleEl);
+            }
+            subtitleEl.textContent = m.subtitle;
+          } else if (subtitleEl) {
+            subtitleEl.remove();
+          }
+        });
+        existingCards.forEach(function(card) {
+          var idx = parseInt(card.getAttribute('data-member'));
+          if (idx >= c.members.length) card.remove();
+        });
+      }
+    }
+
+    function hydrateContact(c) {
+      if (!c) return;
+      var addrText = document.querySelector('[data-field="address-text"]');
+      if (addrText && (c.address_line1 || c.address_line2 || c.address_line3)) {
+        addrText.innerHTML = [c.address_line1, c.address_line2, c.address_line3].filter(Boolean).join('<br/>');
+      }
+      var parkText = document.querySelector('[data-field="parking-text"]');
+      if (parkText && c.parking) parkText.textContent = c.parking;
+    }
+
+    fetch(SUPABASE_URL + '/rest/v1/site_content?select=section,content', {
+      headers: { 'apikey': ANON_KEY, 'Authorization': 'Bearer ' + ANON_KEY }
+    })
+    .then(function(r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function(rows) {
+      var sections = {};
+      rows.forEach(function(row) { sections[row.section] = row.content; });
+      hydrateHero(sections.hero);
+      hydrateAbout(sections.about);
+      hydrateSchedule(sections.schedule);
+      hydrateMembership(sections.membership);
+      hydrateGallery(sections.gallery);
+      hydrateCommittee(sections.committee);
+      hydrateContact(sections.contact);
+    })
+    .catch(function() {});
+  })();
 </script>
 
 </body>
